@@ -1,6 +1,6 @@
 
 
-import { linkItems } from "@/helper/links";
+
 import { FaLink } from "react-icons/fa";
 import ThemeToggler from "@/components/ThemeToggler";
 
@@ -10,6 +10,7 @@ import Experiences from "@/components/section/Experiences";
 import Projects from "@/components/section/Projects";
 import Skills from "@/components/section/Skills";
 import ContactLinks from "@/components/ContactLinks";
+import SidebarLinks from "@/components/SidebarLinks";
 export default function Home() {
   return (
     <>
@@ -29,19 +30,7 @@ export default function Home() {
               I build accessible, pixel-perfect web applications with expertise in both front-end and back-end development.
               </p>
             </div>
-            <div className="mt-10 hidden lg:block ">
-              {linkItems?.map((item, ind) => (
-                <div
-                  key={ind}
-                  className="my-8 flex items-center text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white gap-4 cursor-pointer group"
-                >
-                  <div className="w-[45px] h-px dark:bg-white bg-black group-hover:w-[70px] transition-[width] duration-200 ease-in-out "></div>
-                  <a href={`#${item.link}`} className="text-base font-semibold">
-                    {item.label}
-                  </a>
-                </div>
-              ))}
-            </div>
+          <SidebarLinks/>
            <ContactLinks/>
           </div>
 
