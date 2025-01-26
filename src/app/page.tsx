@@ -1,9 +1,4 @@
-import githubIcon from "@/for portfolio/github.svg";
-import linkedinIcon from "@/for portfolio/linkedin.svg";
-import facebook from "@/for portfolio/facebook.svg";
-import twitter from "@/for portfolio/twitter.svg";
-import gmail from "@/for portfolio/gmail.svg";
-import Image from "next/image";
+
 
 import { linkItems } from "@/helper/links";
 import { FaLink } from "react-icons/fa";
@@ -14,6 +9,7 @@ import About from "@/components/section/About";
 import Experiences from "@/components/section/Experiences";
 import Projects from "@/components/section/Projects";
 import Skills from "@/components/section/Skills";
+import ContactLinks from "@/components/ContactLinks";
 export default function Home() {
   return (
     <>
@@ -30,11 +26,10 @@ export default function Home() {
                 Full Stack Web Developer
               </h2>
               <p className="dark:text-white/70">
-                I build accessible, pixel-perfect digital experiences for the
-                web.
+              I build accessible, pixel-perfect web applications with expertise in both front-end and back-end development.
               </p>
             </div>
-            <div className="mt-[150px] hidden lg:block ">
+            <div className="mt-10 hidden lg:block ">
               {linkItems?.map((item, ind) => (
                 <div
                   key={ind}
@@ -42,55 +37,18 @@ export default function Home() {
                 >
                   <div className="w-[45px] h-px dark:bg-white bg-black group-hover:w-[70px] transition-[width] duration-200 ease-in-out "></div>
                   <a href={`#${item.link}`} className="text-base font-semibold">
-                    {" "}
-                    {item.label}{" "}
+                    {item.label}
                   </a>
                 </div>
               ))}
             </div>
-            <div className="flex gap-4 py-14  ">
-              <Image
-                src={githubIcon}
-                alt="github image"
-                width={30}
-                height={30}
-                className="bg-white/80 rounded-full border border-black"
-              />
-              <Image
-                src={linkedinIcon}
-                alt="linkedin image"
-                width={30}
-                height={30}
-                className="bg-white/80 rounded-full border border-black"
-              />
-              <Image
-                src={facebook}
-                alt="linkedin image"
-                width={30}
-                height={30}
-                className="bg-white/80 rounded-full border-black"
-              />
-              <Image
-                src={twitter}
-                alt="linkedin image"
-                width={30}
-                height={30}
-                className="bg-white/80 rounded-full border border-black"
-              />
-              <Image
-                src={gmail}
-                alt="linkedin image"
-                width={30}
-                height={30}
-                className="bg-white/80 rounded-full border border-black"
-              />
-            </div>
+           <ContactLinks/>
           </div>
 
           {/* Right Section */}
           <div className="basis-full xl:basis-8/12  xl:mt-20 overflow-auto ">
             <About />
-            <Experiences />
+           <Experiences /> 
             <div className="inline-flex items-center gap-2 ring-1 ring-green-600 hover:bg-green-500 dark:ring-orange-500 dark:hover:bg-orange-500 px-6 py-2 ml-2 rounded-full cursor-pointer group z-10 ">
               <a className="text-green-500 dark:text-orange-500 group-hover:text-white/80 pointer-events-none ">
                 View Resume
