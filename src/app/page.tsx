@@ -2,8 +2,8 @@
 
 
 import { FaLink } from "react-icons/fa";
-import ThemeToggler from "@/components/ThemeToggler";
-
+// import ThemeToggler from "@/components/ThemeToggler";
+import ThemeToggler from "../components/ThemeToggler";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import About from "@/components/section/About";
 import Experiences from "@/components/section/Experiences";
