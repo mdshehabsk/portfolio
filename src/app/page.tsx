@@ -1,101 +1,108 @@
+import githubIcon from "@/for portfolio/github.svg";
+import linkedinIcon from "@/for portfolio/linkedin.svg";
+import facebook from "@/for portfolio/facebook.svg";
+import twitter from "@/for portfolio/twitter.svg";
+import gmail from "@/for portfolio/gmail.svg";
 import Image from "next/image";
 
+import { linkItems } from "@/helper/links";
+import { FaLink } from "react-icons/fa";
+import ThemeToggler from "@/components/ThemeToggler";
+
+import BackgroundEffect from "@/components/BackgroundEffect";
+import About from "@/components/section/About";
+import Experiences from "@/components/section/Experiences";
+import Projects from "@/components/section/Projects";
+import Skills from "@/components/section/Skills";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <BackgroundEffect />
+      <main className="bg-bg-light dark:bg-bg-dark ">
+        <div className="px-10 max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-24">
+          {/* Left Section */}
+          <div className="left flex flex-col  py-10 basis-full xl:basis-4/12 xl:mt-20 lg:sticky top-0 lg:h-screen">
+            <div className="info  ">
+              <h1 className="text-3xl lg:text-4xl dark:text-white/90 pb-1 font-bold">
+                MD SHEHAB UDDIN
+              </h1>
+              <h2 className="text-lg dark:text-white/90 pb-1">
+                Full Stack Web Developer
+              </h2>
+              <p className="dark:text-white/70">
+                I build accessible, pixel-perfect digital experiences for the
+                web.
+              </p>
+            </div>
+            <div className="mt-[150px] hidden lg:block ">
+              {linkItems?.map((item, ind) => (
+                <div
+                  key={ind}
+                  className="my-8 flex items-center text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white gap-4 cursor-pointer group"
+                >
+                  <div className="w-[45px] h-px dark:bg-white bg-black group-hover:w-[70px] transition-[width] duration-200 ease-in-out "></div>
+                  <a href={`#${item.link}`} className="text-base font-semibold">
+                    {" "}
+                    {item.label}{" "}
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div className="flex gap-4 py-14  ">
+              <Image
+                src={githubIcon}
+                alt="github image"
+                width={30}
+                height={30}
+                className="bg-white/80 rounded-full border border-black"
+              />
+              <Image
+                src={linkedinIcon}
+                alt="linkedin image"
+                width={30}
+                height={30}
+                className="bg-white/80 rounded-full border border-black"
+              />
+              <Image
+                src={facebook}
+                alt="linkedin image"
+                width={30}
+                height={30}
+                className="bg-white/80 rounded-full border-black"
+              />
+              <Image
+                src={twitter}
+                alt="linkedin image"
+                width={30}
+                height={30}
+                className="bg-white/80 rounded-full border border-black"
+              />
+              <Image
+                src={gmail}
+                alt="linkedin image"
+                width={30}
+                height={30}
+                className="bg-white/80 rounded-full border border-black"
+              />
+            </div>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Right Section */}
+          <div className="basis-full xl:basis-8/12  xl:mt-20 overflow-auto ">
+            <About />
+            <Experiences />
+            <div className="inline-flex items-center gap-2 ring-1 ring-green-600 hover:bg-green-500 dark:ring-orange-500 dark:hover:bg-orange-500 px-6 py-2 ml-2 rounded-full cursor-pointer group z-10 ">
+              <a className="text-green-500 dark:text-orange-500 group-hover:text-white/80 pointer-events-none ">
+                View Resume
+              </a>
+              <FaLink className="text-black dark:text-white/80 group-hover:scale-105 animate-dance group-hover:animate-dance" />
+            </div>
+            <Projects />
+            <Skills/>
+          </div>
         </div>
+        <ThemeToggler />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
