@@ -16,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/linux.png" type="image/png" />
+      </head>
       <body
         className={` light antialiased`}
       >
