@@ -10,6 +10,7 @@ const About = () => {
        <Image
          src={myImage}
          alt="Description of the image"
+         placeholder='blur'
          className=" max-w-[300px] object-cover float-right ml-2 mr-6 mb-4 r "
        />
 
