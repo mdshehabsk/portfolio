@@ -13,20 +13,20 @@ const Skills = () => {
 
         <div className=' mb-12' >
             <h3 className='text-xl dark:text-white my-3 ' >Languages & Frameworks</h3>
-           <div className="flex justify-center gap-2 flex-wrap" >
+           <div className=" grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-4 xl:grid-cols-6 gap-2 " >
            {
-                languagesAndFrameworks?.map((item,ind)=> <div  key={ind} className="grow flex flex-col items-center w-[80px] md:w-[110px] bg-slate-100 dark:bg-slate-800/50 px-4 py-2  cursor-pointer " >
+                languagesAndFrameworks?.map((item,ind)=> <div  key={ind} className="  flex-col flex items-center  items-center  bg-slate-100 dark:bg-slate-800/50 px-4 py-2  cursor-pointer " >
                     <Image src={item?.img} alt="skill item"  />
-                    <p className="dark:text-white text-xs md:text-sm text-nowrap " > {item?.name} </p>
+                    <p className="dark:text-white text-xs md:text-sm text-nowrap text-center " > {item?.name} </p>
                 </div>)
             }
            </div>
         </div>
         <div className=' my-12' >
             <h3 className='text-xl dark:text-white my-3 ' >Technologies & Tools</h3>
-           <div className="flex  gap-2 flex-wrap" >
+           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-4 xl:grid-cols-6 gap-2" >
            {
-                technologiesAndTools?.map((item,ind)=> <div  key={ind} className="grow  w-[80px] md:w-[110px] max-w-[110px] bg-slate-100 dark:bg-slate-800/50 px-4 py-2  cursor-pointer " >
+                technologiesAndTools?.map((item,ind)=> <div  key={ind} className=" flex-col flex items-center bg-slate-100 dark:bg-slate-800/50 px-4 py-2  cursor-pointer " >
                     <Image src={item?.img} alt="skill item"  width={90}  />
                     <p className="dark:text-white text-xs md:text-sm text-nowrap text-center " > {item?.name} </p>
                 </div>)
