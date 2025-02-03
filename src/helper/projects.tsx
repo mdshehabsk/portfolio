@@ -27,9 +27,8 @@ An e-commerce platform featuring user authentication, product filtering, sorting
     imgs : [korean2,korean3,korean4],
     'live-link': "https://korean.mdshehabsk.xyz",
     'source-code' : 'https://github.com/mdshehabsk/korean-exam-quiz.git',
-    name: "Korean Language Exam",
-    description: `
-    An e-commerce platform featuring user authentication, product filtering, sorting, and search capabilities. Includes pagination for smooth navigation, ensuring a seamless user experience. The project integrates a robust backend and a responsive frontend for efficient online shopping.`,
+    name: "Korean Language Exam Practice Website",
+    description: `I developed a web application for users to practice Korean language exams with multiple question sets. Each set contains 20 reading and 20 listening questions. Before starting an exam, all necessary files are cached for a seamless experience. The admin panel allows administrators to add and manage multiple sets along with their corresponding questions.`,
     technologies: [
       "React.js",
       "RTK Query",
