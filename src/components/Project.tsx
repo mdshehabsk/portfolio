@@ -50,7 +50,7 @@ const Project: FC<IProps> = ({ project }) => {
             key={ind}
             src={img}
             alt="product image"
-            className="   "
+            className="  "
           />
         ))}
       </div>
