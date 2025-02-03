@@ -20,7 +20,7 @@ export default function RootLayout({
         <link rel="icon" href="/linux.png" type="image/png" />
       </head>
       <body
-        className={` light antialiased`}
+        className={` dark antialiased`}
       >
         {children}
       </body>

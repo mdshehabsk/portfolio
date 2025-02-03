@@ -2,13 +2,13 @@
 import { useEffect, useState } from 'react';
 
 const useTheme = () => {
-    const [theme, setTheme] = useState<string>('light');
+    const [theme, setTheme] = useState<string>('dark');
     const [isMounted, setIsMounted] = useState(false);
 
     // Ensure the component is mounted before accessing browser-specific features
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            const savedTheme = localStorage.getItem('theme') || 'light';
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             setTheme(savedTheme);
             setBodyTheme(savedTheme);
         }
