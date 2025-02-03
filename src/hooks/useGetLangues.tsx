@@ -22,6 +22,7 @@ import figma from '@/image/skills/figma.png'
 import github from '@/image/skills/github.png'
 import aws from '@/image/skills/aws.png'
 import linux from '@/image/skills/linux.png'
+import postman from '@/image/skills/postman.png'
 const useGetLangues = () => {
     const {theme} = useTheme()
    
@@ -100,7 +101,12 @@ const useGetLangues = () => {
         {
             img: figma,
             name: "Figma"
-        }, {
+        },
+        {
+          img: postman,
+          name: 'Postman'
+        },
+        {
           img: linux,
           name: 'Linux'
         }
