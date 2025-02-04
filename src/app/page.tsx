@@ -38,12 +38,12 @@ export default function Home() {
           <div className="basis-full xl:basis-8/12  xl:mt-20 overflow-auto ">
             <About />
            <Experiences /> 
-            <div className="inline-flex items-center gap-2 ring-1 ring-green-600 hover:bg-green-500 dark:ring-orange-500 dark:hover:bg-orange-500 px-6 py-2 ml-2 rounded-full cursor-pointer group z-10 ">
-              <Link href='https://drive.google.com/file/d/14G5RhIyzOxblgLkL5BlxVY__L1vUqJge/view?usp=sharing' target="_blank" className="text-green-500 dark:text-orange-500 group-hover:text-white/80 pointer-events-none ">
+            <Link href='https://drive.google.com/file/d/14G5RhIyzOxblgLkL5BlxVY__L1vUqJge/view?usp=sharing' target="_blank" className="inline-flex items-center gap-2 ring-1 ring-green-600 hover:bg-green-500 dark:ring-orange-500 dark:hover:bg-orange-500 px-6 py-2 ml-2 rounded-full cursor-pointer group z-10 ">
+              <span  className="text-green-500 dark:text-orange-500 group-hover:text-white/80 pointer-events-none ">
                 View Resume
-              </Link>
+              </span>
               <FaLink className="text-black dark:text-white/80 group-hover:scale-105 animate-dance group-hover:animate-dance" />
-            </div>
+            </Link>
             <Projects />
             <Skills/>
           </div>
