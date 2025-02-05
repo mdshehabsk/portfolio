@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import myImage from "@/image/LMC_20241211_131318_Color boost by Expert Mistry.PORTRAIT-min (1).jpg";
+import myImage from "@/image/MD SHEAHB UDDIN.jpg";
 const About = () => {
   return (
     <div id="about" className='my-10 my-section ' >

@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/linux.png" type="image/png" />
+        <link rel="icon" href="/MD-SHEHAB-UDDIN.jpg" type="image/png" />
       </head>
       <body
         className={` dark antialiased`}
