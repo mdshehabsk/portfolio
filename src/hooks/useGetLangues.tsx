@@ -11,7 +11,7 @@ import reactjs from "@/image/skills/react.png";
 import reduxjs from "@/image/skills/redux.png";
 import tailwindcss from "@/image/skills/tailwind.png";
 import prisma from "@/image/skills/prisma.png";
-import nestjs from "@/image/skills/nestjs.png";
+// import nestjs from "@/image/skills/nestjs.png";
 import postgresql from "@/image/skills/postgresql.png";
 import expressjsDark from '@/image/skills/express-dark.png'
 import nextjs from '@/image/skills/nextjs.png'
@@ -59,10 +59,10 @@ const useGetLangues = () => {
           img: theme === 'dark' ? expressjs : expressjsDark,
           name:'Express Js'
         },
-        {
-          img: nestjs,
-          name:'Nest Js'
-        },
+        // {
+        //   img: nestjs,
+        //   name:'Nest Js'
+        // },
         {
           img: mongodb,
           name:'MongoDB'
